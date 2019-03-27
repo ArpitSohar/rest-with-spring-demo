@@ -1,5 +1,7 @@
 package com.spring.rest.springrest.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
 @Entity
+@JsonIgnoreProperties(value = {"age"})
 public class User {
 
     @Id
